@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OE Library .NET", "OE Library .NET\OE Library .NET.csproj", "{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OE Library", "OE Library\OE Library.vcxproj", "{BDB3518B-1B69-4CCD-837C-5565B983C94A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OECoop", "..\OECoop\OECoop.csproj", "{57666EC9-F8FB-4603-8AB1-CFF5655F532F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Y0 Debug|x64 = Y0 Debug|x64
+		Y0 Patreon Demo|x64 = Y0 Patreon Demo|x64
+		Y0 Release|x64 = Y0 Release|x64
+		YK1 Debug|x64 = YK1 Debug|x64
+		YK1 Release|x64 = YK1 Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.Y0 Debug|x64.ActiveCfg = Y0 Debug|x64
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.Y0 Debug|x64.Build.0 = Y0 Debug|x64
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.Y0 Patreon Demo|x64.ActiveCfg = Y0 Release|x64
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.Y0 Patreon Demo|x64.Build.0 = Y0 Release|x64
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.Y0 Release|x64.ActiveCfg = Y0 Release|x64
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.Y0 Release|x64.Build.0 = Y0 Release|x64
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.YK1 Debug|x64.ActiveCfg = YK1 Debug|x64
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.YK1 Debug|x64.Build.0 = YK1 Debug|x64
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.YK1 Release|x64.ActiveCfg = YK1 Release|x64
+		{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}.YK1 Release|x64.Build.0 = YK1 Release|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.Y0 Debug|x64.ActiveCfg = Y0 Debug|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.Y0 Debug|x64.Build.0 = Y0 Debug|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.Y0 Patreon Demo|x64.ActiveCfg = Y0 Release|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.Y0 Patreon Demo|x64.Build.0 = Y0 Release|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.Y0 Release|x64.ActiveCfg = Y0 Release|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.Y0 Release|x64.Build.0 = Y0 Release|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.YK1 Debug|x64.ActiveCfg = YK1 Debug|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.YK1 Debug|x64.Build.0 = YK1 Debug|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.YK1 Release|x64.ActiveCfg = YK1 Release|x64
+		{BDB3518B-1B69-4CCD-837C-5565B983C94A}.YK1 Release|x64.Build.0 = YK1 Release|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.Y0 Debug|x64.ActiveCfg = Debug|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.Y0 Debug|x64.Build.0 = Debug|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.Y0 Patreon Demo|x64.ActiveCfg = Y0 Patreon Demo|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.Y0 Patreon Demo|x64.Build.0 = Y0 Patreon Demo|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.Y0 Release|x64.ActiveCfg = Release|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.Y0 Release|x64.Build.0 = Release|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.YK1 Debug|x64.ActiveCfg = Debug|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.YK1 Debug|x64.Build.0 = Debug|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.YK1 Release|x64.ActiveCfg = Release|x64
+		{57666EC9-F8FB-4603-8AB1-CFF5655F532F}.YK1 Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0A656C1-E2EF-4082-985F-AF89E6DA2B5C}
+	EndGlobalSection
+EndGlobal

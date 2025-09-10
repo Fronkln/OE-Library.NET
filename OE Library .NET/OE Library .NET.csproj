@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08C7FC09-C50E-4404-8647-AAADB1A3CAE4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OELibrary.NET</RootNamespace>
+    <AssemblyName>OELibraryNET</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'YK1 Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'YK1 Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'YK1 Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'YK1 Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Y0 Release|AnyCPU'">
+    <OutputPath>bin\Y0 Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Y0 Release|x64'">
+    <OutputPath>bin\x64\Y0 Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Y0 Debug|AnyCPU'">
+    <OutputPath>bin\Y0 Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Y0 Debug|x64'">
+    <OutputPath>bin\x64\Y0 Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionReactorManager.cs" />
+    <Compile Include="Library\OEMod.cs" />
+    <Compile Include="Library\OEModAttribute.cs" />
+    <Compile Include="ModLoader.cs" />
+    <Compile Include="Objects\Class\ActionCameraManager.cs" />
+    <Compile Include="Objects\Class\ActionFighterManager.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Library.cs" />
+    <Compile Include="Objects\Class\ActionHActCHPManager.cs" />
+    <Compile Include="Objects\Class\ActionInputManager.cs" />
+    <Compile Include="Objects\Class\ActionManager.cs" />
+    <Compile Include="Objects\Class\CameraBase.cs" />
+    <Compile Include="Objects\Class\Entity.cs" />
+    <Compile Include="Objects\Class\EntityBase.cs" />
+    <Compile Include="Objects\Class\Fighter.cs" />
+    <Compile Include="Objects\Class\FighterMode.cs" />
+    <Compile Include="Objects\Class\FighterModeManager.cs" />
+    <Compile Include="Objects\Class\Human.cs" />
+    <Compile Include="Objects\Class\Input.cs" />
+    <Compile Include="Objects\Class\InputDeviceListener.cs" />
+    <Compile Include="Objects\Class\InputDeviceSlot.cs" />
+    <Compile Include="Objects\Class\Motion\EntityMotion.cs" />
+    <Compile Include="Objects\Class\Motion\HumanMotion.cs" />
+    <Compile Include="Objects\Class\Motion\UnkMotionClass.cs" />
+    <Compile Include="Objects\Class\OEBase.cs" />
+    <Compile Include="Objects\Class\ParticleManager.cs" />
+    <Compile Include="Objects\Class\Player.cs" />
+    <Compile Include="Objects\Class\RenderableEntity.cs" />
+    <Compile Include="Objects\Class\Save.cs" />
+    <Compile Include="Objects\Class\SequenceManager.cs" />
+    <Compile Include="Objects\Class\UnmanagedObject.cs" />
+    <Compile Include="Objects\Enum\JobPhase.cs" />
+    <Compile Include="Objects\Enum\NPCType.cs" />
+    <Compile Include="Objects\Enum\VirtualKey.cs" />
+    <Compile Include="Objects\Struct\FighterBattleStatus.cs" />
+    <Compile Include="Objects\Struct\ChecksumString.cs" />
+    <Compile Include="Objects\Struct\DisposeInfo.cs" />
+    <Compile Include="Objects\Struct\FixedString32.cs" />
+    <Compile Include="Objects\Struct\Matrix4x4.cs" />
+    <Compile Include="Objects\Struct\Quaternion.cs" />
+    <Compile Include="Objects\Struct\Vector3.cs" />
+    <Compile Include="Objects\Struct\Vector4.cs" />
+    <Compile Include="Objects\Task\OETask.cs" />
+    <Compile Include="Objects\Task\OETaskManager.cs" />
+    <Compile Include="Objects\Task\OETaskTime.cs" />
+    <Compile Include="OE.cs" />
+    <Compile Include="Parless.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\InternalMath.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition=" '$(Configuration)' == 'Y0 Release' Or '$(Configuration)' == 'Y0 Debug'   ">
+    <PostBuildEvent>copy /Y "$(TargetDir)$(TargetName).exe" "G:\Program Dosyaları (x86)\SteamLibrary\steamapps\common\Yakuza 0\media\$(TargetName).dll"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'YK1 Release' Or '$(Configuration)' == 'YK1 Debug'   ">
+    <PostBuildEvent>copy /Y "$(TargetDir)$(TargetName).exe" "H:\steamapps2\steamapps\common\Yakuza Kiwami\media\$(TargetName).dll"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)$(TargetName).exe" "E:\SteamLibrary\steamapps\common\Yakuza Kiwami\media\srmm-libs\ae8ee30b-f8f7-4b12-92a9-19093a1190f7\OELib\$(TargetName).dll"
+copy /Y "$(TargetDir)$(TargetName).exe" "E:\SteamLibrary\steamapps\common\Yakuza 0\media\srmm-libs\ae8ee30b-f8f7-4b12-92a9-19093a1190f7\OELib\$(TargetName).dll"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

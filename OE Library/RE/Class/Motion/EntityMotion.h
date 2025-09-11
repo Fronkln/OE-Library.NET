@@ -1,6 +1,13 @@
 #pragma once
 #include "common.h"
 
+class Animation
+{
+public:
+	int16_t Unknown; //0x0000
+	int16_t ID; //0x0002
+}; //Size: 0x0004
+
 class EntityMotion
 {
 public:

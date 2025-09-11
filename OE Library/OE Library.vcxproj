@@ -337,6 +337,7 @@
     <ClInclude Include="LibraryExports\Input_Exports.h" />
     <ClInclude Include="LibraryExports\Player_Exports.h" />
     <ClInclude Include="RE\Class\CActionCameraManager.h" />
+    <ClInclude Include="RE\Class\CActionCCCManager.h" />
     <ClInclude Include="RE\Class\CCameraBase.h" />
     <ClInclude Include="RE\Class\CParticleManager.h" />
     <ClInclude Include="LibraryExports\CSequenceManager_Exports.h" />
@@ -389,6 +390,7 @@
     <ClCompile Include="RE\Class\CParticleManager.cpp" />
     <ClCompile Include="RE\Class\Entity.cpp" />
     <ClCompile Include="RE\Class\FighterMode.cpp" />
+    <ClCompile Include="RE\Class\Human.cpp" />
     <ClCompile Include="RE\Class\Input.cpp" />
     <ClCompile Include="RE\Class\Motion\HumanMotion.cpp" />
     <ClCompile Include="RE\Class\OE.cpp" />

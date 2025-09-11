@@ -170,7 +170,7 @@ namespace OELibrary
             OE.LogInfo("Inner Exception:\n" + ex.InnerException);
             OE.LogInfo("Message:\n" + ex.Message);
             OE.LogInfo("Stacktrace: \n" + ex.StackTrace);
-            MessageBox((IntPtr)0, "Fatal error! More information available on Mods/Y5lib/log.txt. The game will now exit", "Fatal OOELibrary Error", 0x00000010);
+            MessageBox((IntPtr)0, $"Fatal error! More information available on {Library.Root}/log.txt. The game will now exit", "Fatal OOELibrary Error", 0x00000010);
             Environment.Exit(-1); // exit and avoid WER etc
         }
     }

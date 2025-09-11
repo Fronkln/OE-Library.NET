@@ -168,4 +168,8 @@
     <PostBuildEvent>copy /Y "$(TargetDir)$(TargetName).exe" "E:\SteamLibrary\steamapps\common\Yakuza Kiwami\media\srmm-libs\ae8ee30b-f8f7-4b12-92a9-19093a1190f7\OELib\$(TargetName).dll"
 copy /Y "$(TargetDir)$(TargetName).exe" "E:\SteamLibrary\steamapps\common\Yakuza 0\media\srmm-libs\ae8ee30b-f8f7-4b12-92a9-19093a1190f7\OELib\$(TargetName).dll"</PostBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+</PreBuildEvent>
+  </PropertyGroup>
 </Project>

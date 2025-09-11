@@ -6,6 +6,10 @@ class HumanMotion;
 #pragma pack(push, 1)
 class Human : public RenderableEntity
 {
+	typedef void(__fastcall* _WarpToPosition)(void* thisPtr, vec4f* pos);
+
+	static _WarpToPosition ASM_WarpToPosition;
+
 public:
 	char pad_00E0[32]; //0x00E0
 	vec4f N00000674; //0x0100
@@ -24,5 +28,11 @@ public:
 	char pad_01F8[72]; //0x01F8
 	vec4f humanPos2; //0x0240
 	char pad_0250[4]; //0x0250
+
+
+	void WarpToPosition(vec4f* pos)
+	{
+		ASM_WarpToPosition(this, pos);
+	}
 }; //Size: 0x0254
 #pragma pack(pop)

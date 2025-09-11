@@ -177,6 +177,9 @@
     <ClInclude Include="LibraryExports\Input_Exports.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RE\Class\CActionCCCManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -216,6 +219,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RE\Class\Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RE\Class\Human.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

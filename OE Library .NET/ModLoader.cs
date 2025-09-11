@@ -8,6 +8,9 @@ namespace OELibrary
 {
     internal static class ModLoader
     {
+        [DllImport("User32.dll", CharSet = CharSet.Unicode)]
+        private static extern int MessageBox(IntPtr h, string m, string c, int type);
+
         internal static void InitializeMods()
         {
             string modDir = Path.Combine(Library.BaseDirectory, "mods");
@@ -70,9 +73,15 @@ namespace OELibrary
             }
             catch (Exception ex)
             {
+                if (ex as FileLoadException != null && ex.InnerException as NotSupportedException != null)
+                    MessageBox((IntPtr)0, $"Failed to load {Path.GetFileName(path)} in mods/{Path.GetDirectoryName(path)} because it was untrusted by system, please unblock!\n" +
+                        $"1)Go to the problematic file\n" +
+                        $"2)Right click on it, go to properties\n" +
+                        $"3)Press the unblock button", "Load Error", 0);
+
                 //The issue was not that it wasn't a valid .NET library, it was something else.
-                if (ex as BadImageFormatException == null)
-                    OE.LogError($"Failed to load library.\nError {ex.GetType().Name}: " + ex.Message + "\n" + ex.InnerException + "\nStacktrace:\n" + ex.StackTrace);
+                else if (ex as BadImageFormatException == null)
+                    OE.LogError("Failed to load library.\nError: " + ex.Message + "\n" + ex.InnerException + "\nStacktrace:\n" + ex.StackTrace);
 
                 return false;
             }

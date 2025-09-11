@@ -170,6 +170,6 @@ copy /Y "$(TargetDir)$(TargetName).exe" "E:\SteamLibrary\steamapps\common\Yakuza
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
-</PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>

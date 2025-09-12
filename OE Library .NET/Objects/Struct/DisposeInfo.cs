@@ -12,9 +12,7 @@ namespace OELibrary
         [FieldOffset(0x10)]
         public ChecksumString model; //0x0010
         [FieldOffset(0x38)]
-        public short N000005F4; //0x38
-        [FieldOffset(0x3A)]
-        public short N000013DF; //0x3A
+        public int fighterUID; //0x38
         [FieldOffset(0x3C)]
         public short N00001D1D; //0x3C
         [FieldOffset(0x3E)]

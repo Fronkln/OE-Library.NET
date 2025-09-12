@@ -6,7 +6,10 @@ class DisposeInfo
 public:
 	vec4f spawnPosition; //0x0000
 	class checksum_string model; //0x0010
-	char pad_0030[16]; //0x0030
+	char pad_0030[8]; //0x0030
+	uint32_t fighterUID; //0x0038
+	int16_t N00001D1D; //0x003C
+	int16_t N000013EA; //0x003E
 	char name[32]; //0x0040
 	char battleAnim[8]; //0x0060
 	char pad_0068[26]; //0x0068

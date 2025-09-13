@@ -11,3 +11,8 @@ OE_LIBRARY_EXPORT inline void OE_LIB_PARTICLEMANAGER_UNLOAD_ARCHIVE(int archiveI
 {
 	CParticleManager::UnloadParticleArchive(archiveID);
 }
+
+OE_LIBRARY_EXPORT inline void OE_LIB_PARTICLEMANAGER_PLAY(int particleID, Matrix4x4* mtx)
+{
+	CParticleManager::Play(particleID, mtx, 0, 0, 0);
+}

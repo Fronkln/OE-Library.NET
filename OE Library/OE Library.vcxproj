@@ -381,6 +381,7 @@
     <ClInclude Include="RE\Struct\vec.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LibraryExports\CActionCCCManager_Exports.cpp" />
     <ClCompile Include="OEStatics.cpp" />
     <ClCompile Include="RE\Class\CActInputDeviceManager.cpp" />
     <ClCompile Include="RE\Class\CActionFighterManager.cpp" />

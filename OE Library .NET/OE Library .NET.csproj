@@ -115,6 +115,7 @@
     <Compile Include="Objects\Class\ActionHActCHPManager.cs" />
     <Compile Include="Objects\Class\ActionInputManager.cs" />
     <Compile Include="Objects\Class\ActionManager.cs" />
+    <Compile Include="Objects\Class\ActionCCCManager.cs" />
     <Compile Include="Objects\Class\CameraBase.cs" />
     <Compile Include="Objects\Class\Entity.cs" />
     <Compile Include="Objects\Class\EntityBase.cs" />

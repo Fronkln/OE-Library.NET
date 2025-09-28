@@ -11,6 +11,7 @@ class CActionReactorManager;
 class CActionFighterManager;
 class CActionHActCHPManager;
 class CActionParticleManager;
+class CActionCCCManager;
 
 class OEStatics
 {
@@ -22,6 +23,7 @@ public:
     static CActionFighterManager** ActionFighterManager;
     static CActionHActCHPManager** ActionHActCHPManager;
     static CActionParticleManager** ActionParticleManager;
+    static CActionCCCManager** ActionCCCManager;
 
     static void DoOffsets()
     {
@@ -40,6 +42,7 @@ public:
         ActionFighterManager = (CActionFighterManager**)resolve_relative_addr(PatternScan("48 8B 0D ? ? ? ? BA ? ? ? ? E8 ? ? ? ? 48 8B 0D ? ? ? ? BA ? ? ? ? 48 81 C1 ? ? ? ?"));
         ActionHActCHPManager = (CActionHActCHPManager**)resolve_relative_addr(PatternScan("48 8B 05 ? ? ? ? 48 8B 0D ? ? ? ? 4D 89 73 E0"));
         ActionParticleManager = (CActionParticleManager**)resolve_relative_addr(PatternScan("48 8B 0D ? ? ? ? 48 85 C9 74 ? 8B 84 24 80 00 00 00"));
+        ActionCCCManager = (CActionCCCManager**)resolve_relative_addr(PatternScan("48 8B 0D ? ? ? ? 48 85 C9 74 ? E8 ? ? ? ? 85 C0 0F 84 ? ? ? ? E8 ? ? ? ? 85 C0"));
     }
 
     static void DoOffsetsY0()

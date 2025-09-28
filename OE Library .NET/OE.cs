@@ -107,7 +107,7 @@ namespace OELibrary
 
         internal static void Init()
         {
-            m_isYK1 = Library.Root.Contains("Kiwami");
+            m_isYK1 = Unsafe.CPP.PatternSearch(" 50 75 72 63 68 61 73 65 20 74 68 65 20 59 61 6B 75 7A 61 20 30 20 50 6C 61 79 53 74 61 74 69 6F 6E 3F 56 69 74 61 20 47 61 6D 65 20 50 61 63 6B") == IntPtr.Zero;
         }
 
         public static Player GetPlayer()

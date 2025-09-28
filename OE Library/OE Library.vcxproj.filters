@@ -224,5 +224,8 @@
     <ClCompile Include="RE\Class\Human.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LibraryExports\CActionCCCManager_Exports.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -59,6 +59,9 @@ namespace OELibrary
             return idx;
         }
 
+        [DllImport("OE Library.dll", EntryPoint = "OE_LIB_CACTIONFIGHTERMANAGER_PROCESS_DISPOSE_QUEUE", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void ProcessDisposeQueue();
+
         public static Fighter[] GetFighters()
         {
             List<Fighter> fighters = new List<Fighter>();

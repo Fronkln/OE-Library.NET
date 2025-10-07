@@ -8,6 +8,7 @@ class DisposeInfo;
 class CActionFighterManager : public CActionBase
 {
     typedef int(__fastcall* _AddDisposeForSpawn)(void* thisPtr, void* inf);
+    typedef void(__fastcall* _ProcessDisposeQueue)(void* thisPtr);
 
     typedef Fighter*(__fastcall* _GetFighterByUID)(void* thisPtr, int uid);
 
@@ -28,6 +29,7 @@ public:
 	char pad_0584[68]; //0x0584
 
     static _AddDisposeForSpawn ASM_AddDisposeForSpawn;
+    static _ProcessDisposeQueue ASM_ProcessDisposeQueue;
     static _GetFighterByUID ASM_GetFighterByUID;
 
 public:
@@ -47,6 +49,11 @@ public:
     int AddDisposeForSpawn(DisposeInfo* inf)
     {
         return ASM_AddDisposeForSpawn(this, inf);
+    }
+
+    void ProcessDisposeQueue() 
+    {
+        ASM_ProcessDisposeQueue(this);
     }
 };
 

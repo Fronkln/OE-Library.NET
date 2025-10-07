@@ -32,6 +32,16 @@ OE_LIBRARY_EXPORT inline int OE_LIB_CACTIONFIGHTERMANAGER_ADD_DISPOSE_FOR_SPAWN(
     return fman->AddDisposeForSpawn(inf);
 }
 
+OE_LIBRARY_EXPORT inline void OE_LIB_CACTIONFIGHTERMANAGER_PROCESS_DISPOSE_QUEUE()
+{
+	CActionFighterManager* fman = *OEStatics::ActionFighterManager;
+
+	if (fman == nullptr)
+		return;
+
+	fman->ProcessDisposeQueue();
+}
+
 OE_LIBRARY_EXPORT inline bool OE_LIB_ACTIONFIGHTERMANAGER_IS_FIGHTER_PRESENT(int index)
 {
 	if (index == -1)

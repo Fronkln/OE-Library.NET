@@ -31,7 +31,7 @@ extern "C"
 
         VirtualProtect(addr, length, PAGE_EXECUTE_READWRITE, &oldProtect);
         memset(addr, 0x90, length);
-        VirtualProtect(addr, length, oldProtect, &oldProtect);
+        //VirtualProtect(addr, length, oldProtect, &oldProtect);
     };
 
 
@@ -41,7 +41,7 @@ extern "C"
 
         VirtualProtect(addr, length, PAGE_EXECUTE_READWRITE, &oldProtect);
         memcpy(addr, buf, length);
-        VirtualProtect(addr, length, oldProtect, &oldProtect);
+        //VirtualProtect(addr, length, oldProtect, &oldProtect);
     };
 
     OE_LIBRARY_EXPORT inline void* LIB_PATTERN_SEARCH(const char* pattern)

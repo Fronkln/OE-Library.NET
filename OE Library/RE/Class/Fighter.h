@@ -29,9 +29,9 @@ public:
 	int32_t fighterIndex; //0x0424
 	char pad_0428[184]; //0x0428
 	int32_t processDamage; //0x04E0
-	char pad_04E4[3808]; //0x04E4
-	class InputInfo inputInfo; //0x13C4
-	char pad_13D4[7676]; //0x13D4
+	char pad_04E4[3796]; //0x04E4
+	class InputInfo inputInfo; //0x13B8
+	char pad_13C8[7688]; //0x13C8
 	int16_t N0000C0AC; //0x31D0
 	int16_t N0000C0AE; //0x31D2
 	int32_t N00005852; //0x31D4

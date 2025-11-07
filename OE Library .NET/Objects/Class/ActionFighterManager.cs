@@ -94,7 +94,7 @@ namespace OELibrary
                     var fighter = GetFighterByIndex(i);
                     var dispose = fighter.Dispose;
 
-                    if (dispose.npcType == NPCType.Goon || dispose.npcType == NPCType.Boss)
+                    if (dispose.npcType != NPCType.Player && dispose.npcType != NPCType.Npc)
                         fighters.Add(fighter);
                 }
 

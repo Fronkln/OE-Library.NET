@@ -12,6 +12,9 @@ namespace OELibrary
     {
         public static class CPP
         {
+            [DllImport("OE Library.dll", EntryPoint = "LIB_UNSAFE_ALLOC_BUFFER", CallingConvention = CallingConvention.Cdecl)]
+            public static extern IntPtr AllocBuffer(IntPtr origin);
+
             [DllImport("OE Library.dll", EntryPoint = "LIB_UNSAFE_NOP", CallingConvention = CallingConvention.Cdecl)]
             public static extern void NopMemory(IntPtr memory, uint len);
 
@@ -21,6 +24,10 @@ namespace OELibrary
 
             [DllImport("OE Library.dll", EntryPoint = "LIB_READ_RELATIVE_ADDRESS", CallingConvention = CallingConvention.Cdecl)]
             public static extern IntPtr ResolveRelativeAddress(IntPtr addr, int instructionLen);
+
+            [DllImport("OE Library.dll", EntryPoint = "LIB_WRITE_RELATIVE_ADDRESS", CallingConvention = CallingConvention.Cdecl)]
+            public static extern void WriteRelativeAddress(IntPtr addr, IntPtr target, int instructionLen);
+
 
             [DllImport("OE Library.dll", EntryPoint = "LIB_PATTERN_SEARCH", CallingConvention = CallingConvention.Cdecl)]
             public static extern IntPtr PatternSearch(string pattern);
@@ -70,6 +77,7 @@ namespace OELibrary
         private static extern short GetAsyncKeyState(int vKey);
 
         private static bool m_isYK1;
+        private static bool m_isY0DC;
 
 
 
@@ -102,12 +110,23 @@ namespace OELibrary
 
         public static bool IsY0()
         {
+            return !m_isYK1 && !m_isY0DC;
+        }
+
+        public static bool IsY0or0DC()
+        {
             return !m_isYK1;
+        }
+
+        public static bool IsY0DC()
+        {
+            return m_isY0DC;
         }
 
         internal static void Init()
         {
-            m_isYK1 = Unsafe.CPP.PatternSearch(" 50 75 72 63 68 61 73 65 20 74 68 65 20 59 61 6B 75 7A 61 20 30 20 50 6C 61 79 53 74 61 74 69 6F 6E 3F 56 69 74 61 20 47 61 6D 65 20 50 61 63 6B") == IntPtr.Zero;
+            m_isYK1 = Unsafe.CPP.PatternSearch("50 75 72 63 68 61 73 65 20 74 68 65 20 59 61 6B 75 7A 61 20 30 20 50 6C 61 79 53 74 61 74 69 6F 6E 3F 56 69 74 61 20 47 61 6D 65 20 50 61 63 6B") == IntPtr.Zero;
+            m_isY0DC = !m_isYK1 && Unsafe.CPP.PatternSearch("48 89 44 24 20 48 8B D5 48 8B 0D ? ? ? ?") == IntPtr.Zero;
         }
 
         public static Player GetPlayer()

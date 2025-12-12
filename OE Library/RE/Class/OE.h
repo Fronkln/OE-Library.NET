@@ -35,9 +35,11 @@ public:
 			return;
 
 		MH_Initialize();
-
+#if !Y0DC
 		void* updateFunc = PatternScan("40 53 55 57 41 56 41 57 48 83 EC ? 8B 15 ? ? ? ? 4C 63 F9 48 8D 0D ? ? ? ? E8 ? ? ? ? 4B 8D 04 7F 44 89 3D ? ? ? ?");
-
+#else
+		void* updateFunc = PatternScan("40 53 55 56 41 54 41 56");
+#endif
 		MH_STATUS phaseHookStatus = MH_CreateHook(reinterpret_cast<void**>(updateFunc), &Hook_JobPhaseExecute, reinterpret_cast<void**>(&phase_execute_trampoline));
 		MH_EnableHook(reinterpret_cast<void**>(updateFunc));
 

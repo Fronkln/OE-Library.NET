@@ -22,9 +22,15 @@
 
 #include "MemoryMgr.h"
 #include "PatternScan.h"
+#include "buffer.h"
 
 extern "C"
 {
+    OE_LIBRARY_EXPORT inline void* LIB_UNSAFE_ALLOC_BUFFER(void* origin)
+    {
+        return AllocateBuffer(origin);
+    };
+
     OE_LIBRARY_EXPORT inline void LIB_UNSAFE_NOP(void* addr, unsigned int length)
     {
         DWORD oldProtect;
@@ -52,6 +58,11 @@ extern "C"
     OE_LIBRARY_EXPORT inline void* LIB_READ_RELATIVE_ADDRESS(void* addr, int instruction_length)
     {
         return  resolve_relative_addr(addr, instruction_length);
+    };
+
+    OE_LIBRARY_EXPORT inline void LIB_WRITE_RELATIVE_ADDRESS(void* addr, intptr_t target, int instruction_length)
+    {
+        write_relative_addr(addr, target, instruction_length);
     };
 
     OE_LIBRARY_EXPORT inline void* LIB_READ_CALL(void* addr)

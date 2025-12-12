@@ -13,8 +13,14 @@ namespace OELibrary
         [DllImport("OE Library.dll", EntryPoint = "OE_LIB_SEQUENCEMANAGER_GETTER_CURRENT_MISSION_STATE", CallingConvention = CallingConvention.Cdecl)]
         internal static extern int OELib_ActionSequenceManager_Getter_CurrentMissionPhase();
 
+        [DllImport("OE Library.dll", EntryPoint = "OE_LIB_SEQUENCEMANAGER_GETTER_SAVE_HEADER_VALUES", CallingConvention = CallingConvention.Cdecl)]
+        internal static extern int OELib_ActionSequenceManager_Getter_SaveHeaderValues();
+
+
         public static int MissionID { get { return OELib_ActionSequenceManager_Getter_CurrentMission(); } }
         public static int StageID { get { return OELib_ActionSequenceManager_Getter_CurrentStage(); } }
         public static int Phase { get { return OELib_ActionSequenceManager_Getter_CurrentMissionPhase(); } }
+
+        public static int SaveHeaderValues { get { return OELib_ActionSequenceManager_Getter_SaveHeaderValues(); } }
     }
 }

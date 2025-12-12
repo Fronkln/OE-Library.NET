@@ -62,10 +62,12 @@ OE_LIBRARY_EXPORT inline void OE_LIB_ACTIONFIGHTERMANAGER_SET_FIGHTER_PRESENT(un
 
 	CActionFighterManager* fman = *OEStatics::ActionFighterManager;
 
+	unsigned long long val = (1ULL << 63 - index);
+
 	if (present)
-		fman->presentFighters |= ((uint64_t)1 << index);
+		fman->presentFighters |= val;
 	else
-		fman->presentFighters &= ~((uint64_t)1 << index);
+		fman->presentFighters &= ~(val);
 }
 
 OE_LIBRARY_EXPORT inline bool OE_LIB_ACTIONFIGHTERMANAGER_IS_FIGHTER_ACTIVE(int index)

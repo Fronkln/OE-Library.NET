@@ -58,7 +58,7 @@ namespace OELibrary
             try
             {
                 //Ugly reflection type
-                Assembly loadedAssembly = Assembly.LoadFrom(path);;
+                Assembly loadedAssembly = Assembly.LoadFrom(path);
 
                 foreach (CustomAttributeData dat in loadedAssembly.CustomAttributes)
                 {

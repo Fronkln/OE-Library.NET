@@ -17,7 +17,7 @@ namespace OELibrary
         {
             //this is so ass holy shit
             //TODO: Move this to an export in SequenceManager, this value is stored at 0x6D4 in mission data
-            _GetSaveHeaderValueFunc = Marshal.GetDelegateForFunctionPointer<GetSaveHeaderValue>(CPP.PatternSearch("48 8B 05 ? ? ? ? 48 8B 48 50 8B 81 D4 06 00 00"));
+            //_GetSaveHeaderValueFunc = Marshal.GetDelegateForFunctionPointer<GetSaveHeaderValue>(CPP.PatternSearch("48 8B 05 ? ? ? ? 48 8B 48 50 8B 81 D4 06 00 00"));
         }
 
         public static int CurrentChapter
@@ -25,7 +25,7 @@ namespace OELibrary
             get
             {
                 //this is so ass holy shit
-                int value = _GetSaveHeaderValueFunc();
+                int value = SequenceManager.SaveHeaderValues;
                 return BitConverter.GetBytes(value)[2];
             }
         }

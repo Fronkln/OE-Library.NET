@@ -93,6 +93,26 @@
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Y0DC Debug|AnyCPU'">
+    <OutputPath>bin\Y0DC Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Y0DC Debug|x64'">
+    <OutputPath>bin\x64\Y0DC Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -105,6 +125,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionReactorManager.cs" />
+    <Compile Include="DXHook.cs" />
+    <Compile Include="ImGui.cs" />
     <Compile Include="Library\OEMod.cs" />
     <Compile Include="Library\OEModAttribute.cs" />
     <Compile Include="ModLoader.cs" />

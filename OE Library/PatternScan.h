@@ -24,6 +24,27 @@ inline void* resolve_relative_addr(void* instruction_start, int instruction_leng
     return addr;
 }
 
+
+inline void write_int(uintptr_t addr, int val)
+{
+    unsigned long OldProtection;
+    VirtualProtect((LPVOID)(addr), 4, PAGE_EXECUTE_READWRITE, &OldProtection);
+
+    int* ptr = (int*)addr;
+    *ptr = val;
+
+    VirtualProtect((LPVOID)(addr), 4, OldProtection, NULL);
+}
+
+inline void write_relative_addr(void* instruction_start, intptr_t target, int instruction_length = 7)
+{
+    intptr_t instruction_end = (intptr_t)((unsigned long long)instruction_start + instruction_length);
+    unsigned int* offset = (unsigned int*)((unsigned long long)instruction_start + (instruction_length - 4));
+
+    int calcOffset = target - instruction_end;
+    write_int((intptr_t)offset, calcOffset);
+}
+
 inline std::uint8_t* PatternScan(void* module, const char* signature)
 {
     static auto pattern_to_byte = [](const char* pattern) {

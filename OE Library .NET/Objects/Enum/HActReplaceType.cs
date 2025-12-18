@@ -1,0 +1,38 @@
+﻿namespace OELibrary.NET
+{
+    public enum HActReplaceType
+    {
+        ZA_HUPLAYER,
+        ZA_HUCAB0,
+        ZA_HUCAB1,
+        ZA_HUCAB2,
+        ZA_HUENEMY0,
+        ZA_HUENEMY1,
+        ZA_HUENEMY2,
+        ZA_HUENEMY3,
+        ZA_HUENEMY4,
+        ZA_HUENEMY5,
+        ZA_HUENEMY6,
+        ZA_HUENEMY7,
+        ZA_HUENEMY8,
+        ZA_HUENEMY9,
+        ZA_HUNPC0,
+        ZA_HUNPC1,
+        ZA_WETAG0,
+        ZA_WEPLAYERL,
+        ZA_WEPLAYERR,
+        ZA_WENPC0,
+        ZA_WENPC1,
+        ZA_WEENEMY0,
+        ZA_WEENEMY1,
+        ZA_WEENEMY2,
+        ZA_WEENEMY3,
+        ZA_WEENEMY4,
+        ZA_WEENEMY5,
+        ZA_WEENEMY6,
+        ZA_WEENEMY7,
+        ZA_WEENEMY8,
+        ZA_WEENEMY9,
+        ZA_WEBLT0
+    }
+}
